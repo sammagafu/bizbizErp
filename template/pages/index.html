@@ -1,0 +1,881 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<main data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <!-- Start Banner Section -->
+    <section class="demo_1 banner_section" id="home">
+      <div class="container">
+        <div class="row justify-content-md-center text-center">
+          <div class="col-md-12 col-lg-12">
+            <div class="banner_title margin-b-5">
+              <h1>Automatated Business Management Solution, for every business <span>for every industry</span> </h1>
+              <p>
+                Our solutions brings you closer to a complete picture of financial success.
+
+
+              </p>
+              <button type="button" class="btn scale rounded-pill btn-video btn_video" data-toggle="modal" data-src="https://www.youtube.com/embed/VvHoHw5AWTk" data-target="#mdllVideo">
+                <i class="tio play_circle"></i>
+                Discover this video
+              </button>
+            </div>
+          </div>
+          <!-- image Product -->
+          <div class="image_product">
+            <img src="{% static 'assets/frontend/img/web-sass.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Banner -->
+
+    <!-- Start logos -->
+    <section class="logos_section padding-t-5 text-center">
+      <div class="container">
+        <h3>Trusted by different businesses across the world</h3>
+        <div class="row justify-content-md-center">
+          <div class="col-md-10">
+            <div class="wrapper_logos">
+              <div class="items bxslider">
+                <a class="item-client" href="#" target="_blank">
+                  <img src="{% static 'assets/frontend/img/logos/slack.png' %}" alt="" />
+                  <span>Visit site</span>
+                </a>
+                <a class="item-client" href="#" target="_blank">
+                  <img src="{% static 'assets/frontend/img/logos/fitbit.png' %}" alt="" />
+                  <span>Visit site</span>
+                </a>
+                <a class="item-client" href="#" target="_blank">
+                  <img src="{% static 'assets/frontend/img/logos/google.png' %}" alt="" />
+                  <span>Visit site</span>
+                </a>
+                <a class="item-client" href="#" target="_blank">
+                  <img src="{% static 'assets/frontend/img/logos/netflix.png' %}" alt="" />
+                  <span>Visit site</span>
+                </a>
+                <a class="item-client" href="#" target="_blank">
+                  <img src="{% static 'assets/frontend/img/logos/slack.png' %}" alt="" />
+                  <span>Visit site</span>
+                </a>
+                <a class="item-client" href="#" target="_blank">
+                  <img src="{% static 'assets/frontend/img/logos/uber.png' %}" alt="" />
+                  <span>Visit site</span>
+                </a>
+              </div>
+              <div class="logos_masks"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End logos -->
+
+    <!-- Start Services -->
+    <section class="services_section padding-t-12" id="Services">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-8 col-lg-6 text-center">
+            <div class="title_sections">
+              <div class="before_title">
+                <span>All in one.Affordable</span>
+                <span>Next-Generation</span>
+              </div>
+              <h2>Supercharge your sales, marketing and service</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="items_serv" data-aos="fade-up" data-aos-delay="0">
+              <div class="media">
+                <div class="item-img">
+                  <img src="{% static 'assets/frontend/img/icons/phone.svg' %}" alt="" />
+                </div>
+                <div class="media-body">
+                  <div class="txt-small">
+                    <span>First</span>
+                  </div>
+                  <h3>All in one </h3>
+                  <p>
+                    Automate your sales, marketing, and services in one platform. Avoid data leakes and eneable consistency messaging.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="items_serv" data-aos="fade-up" data-aos-delay="100">
+              <div class="media">
+                <div class="item-img">
+                  <img src="{% static 'assets/frontend/img/icons/discount.svg' %}" alt="" />
+                </div>
+                <div class="media-body">
+                  <div class="txt-small">
+                    <span>Second</span>
+                  </div>
+                  <h3>Affordable</h3>
+                  <p>
+                    Make the most of BizBiz modern features & intergrations, easy to implement and great support at an affordable prices
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="items_serv" data-aos="fade-up" data-aos-delay="200">
+              <div class="media">
+                <div class="item-img">
+                  <img src="{% static 'assets/frontend/img/icons/decentralized.svg' %}" alt="cloud" />
+                </div>
+                <div class="media-body">
+                  <div class="txt-small">
+                    <span>Third</span>
+                  </div>
+                  <h3>Next-Generation</h3>
+                  <p>
+                    Cloud based, available in every platform, available APIs,fast and simple to use
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Services -->
+
+    <!-- Start Features -->
+    <section class="features_section padding-t-12">
+      <div class="container">
+        <div class="row">
+          <!-- text -->
+          <div class="col-md-8 col-lg-5">
+            <div class="title_sections mb-5 mb-lg-0">
+              <div class="before_title">
+                <span>Communication made easier</span><br>
+                <span>Multiple channels, one platform for communication</span>
+              </div>
+              <h2>Connect with your customers wherever they are</h2>
+              <p>
+                Customers have more ways to interact with businesses than ever before. BizBiz allows you to connect with your customers through multiple channels, all while centralizing information that empowers your sales team to have contextual, meaningful conversations with your prospects.
+              </p>
+              <ul class="list-group">
+                <li class="list-group-item media border-0">
+                  <img src="{% static 'assets/frontend/img/icons/note.svg' %}" alt="" />
+                  <div class="media-body">
+                    Reach customers across every channel: telephone, email, live chat, and social media
+                  </div>
+                </li>
+                <li class="list-group-item media border-0">
+                  <img src="{% static 'assets/frontend/img/icons/calendar.svg' %}" alt="" />
+                  <div class="media-body">
+                    Get real-time notifications when customers interact with your business
+                  </div>
+                </li>
+                <li class="list-group-item media border-0">
+                  <img src="{% static 'assets/frontend/img/icons/writing.svg' %}" alt="" />
+                  <div class="media-body">
+                    Measure the effectiveness of your customer communication and find the best time and channel to reach out to your customers
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- img -->
+          <div class="col-lg-7">
+            <div class="images_desc">
+              <img src="{% static 'assets/frontend/img/features-product.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Features -->
+
+    <!-- Start Section Products -->
+    <section class="products_section margin-t-12 padding-py-12" id="Products">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-8 col-lg-6 text-center">
+            <div class="title_sections">
+              <h2>An app for every need</h2>
+              <p>
+                The only platform you will ever need to help run your business  
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 margin-b-5">
+            <div class="item_pro" data-aos="fade-up" data-aos-delay="0">
+              <div class="icon_t">
+                <i class="tio github"></i>
+              </div>
+              <h3>Sales</h3>
+              <p>
+                CRM, Sales, Invoicing, subscription, Rental
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 margin-b-5 mx-auto">
+            <div class="item_pro" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon_t">
+                <i class="tio diamond_outlined"></i>
+              </div>
+              <h3>Operation</h3>
+              <p>
+                Accounting, Consolidation, Projects, Timesheets, Helpdesk, Inventory, Purchase & Documents
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 margin-b-5">
+            <div class="item_pro" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon_t">
+                <i class="tio robot"></i>
+              </div>
+              <h3>Manufacturing</h3>
+              <p>Manufacturing, PLM, Maintenance, Quality, Repair
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 margin-b-5 my-auto">
+            <div class="item_link" data-aos="fade-up" data-aos-delay="200">
+              <p>
+                Extend GitBook with...
+              </p>
+              <a href="#" class="btn rounded-pill btn_more effect-letter">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- hide Header -->
+      <div id="triggerForm"></div>
+      <!-- End. -->
+
+      <!-- Scroll Horizontal -->
+      <div class="Slide_horizontal_scroll">
+        <img class="title_svg" src="{% static 'assets/frontend/img/text.svg' %}" />
+        <div id="pinContainer">
+          <div class="container">
+            <div id="slideContainer">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="item_slide panel">
+                    <div class="block_img">
+                      <img src="{% static 'assets/frontend/img/02.png' %}" alt="" />
+                      <div class="item__name">
+                        <div class="txt">
+                          <h4 class="txt1">Budget</h4>
+                          <h4 class="txt2">Overview</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="item_slide panel">
+                    <div class="block_img">
+                      <img src="{% static 'assets/frontend/img/03.png' %}" alt="" />
+                      <div class="item__name">
+                        <div class="txt">
+                          <h4 class="txt1">Budget</h4>
+                          <h4 class="txt2">Overview</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="item_slide panel">
+                    <div class="block_img">
+                      <img src="{% static 'assets/frontend/img/04.png' %}" alt="" />
+                      <div class="item__name">
+                        <div class="txt">
+                          <h4 class="txt1">Budget</h4>
+                          <h4 class="txt2">Overview</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="item_slide panel">
+                    <div class="block_img">
+                      <img src="{% static 'assets/frontend/img/01.png' %}" alt="" />
+                      <div class="item__name">
+                        <div class="txt">
+                          <h4 class="txt1">Budget</h4>
+                          <h4 class="txt2">Overview</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Scroll Horizontal -->
+    </section>
+    <!-- End Section Products -->
+
+    <!-- Show Header -->
+    <div id="triggerTo"></div>
+    <!-- End. -->
+
+    <!-- Start Pricing -->
+    <section class="pricing_section padding-py-12" id="Pricing">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-8 col-lg-6 text-center">
+            <div class="title_sections">
+              <div class="before_title">
+                <span>Pricing</span>
+                <span>Plan</span>
+              </div>
+              <h2>Building great customer relationships is just a step away</h2>
+              <!-- toggle switch -->
+              <div class="toggle_switch margin-t-4">
+                <!-- toggle -->
+                <label class="toggler toggler--is-active" id="filt-monthly">Monthly</label>
+
+                <div class="toggle">
+                  <input type="checkbox" id="switcher" class="check" />
+                  <b class="b switch"></b>
+                </div>
+
+                <div class="d-inline-block yearly">
+                  <label class="toggler" id="filt-yearly">Yearly</label>
+                  <span class="offer rounded-pill">Save 20%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="blocks_pricing" id="monthly">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="item__price">
+                <div class="logo_price">
+                  <div class="icon_gif">
+                    <img class="gif" src="{% static 'assets/frontend/img/gif/partying_face.gif' %}" />
+                  </div>
+                </div>
+                <h4 class="name_p">Startups</h4>
+                <div class="number">
+                  <span class="n_price">3.99</span>
+                  <span class="coins">$</span>
+                  <span class="d-block per">Month Billed Annually</span>
+                </div>
+                <p class="info_price">
+                  For startup looking for CRM solution
+                </p>
+                <div class="feature_price">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Basic CRM features
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Unlimited Personal Pipelines
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Email Power Tools
+                    </li>
+                  </ul>
+                  <button type="button" class="btn effect-letter scale rounded-pill btn_md_primary c-white bg-blue">
+                    Get Started Free
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="item__price popular">
+                <img class="icon_popular" src="{% static 'assets/frontend/img/popular.svg' %}" />
+
+                <div class="logo_price">
+                  <div class="icon_gif">
+                    <img class="gif" src="{% static 'assets/frontend/img/gif/nerd_face.gif' %}" />
+                  </div>
+                </div>
+                <h4 class="name_p">Small Business</h4>
+                <div class="number">
+                  <span class="n_price">9.99</span>
+                  <span class="coins">$</span>
+                  <span class="d-block per">Per User/Month Billed Annually</span>
+                </div>
+                <p class="info_price">
+                  For small Business looking for customization and
+                  advanced reports
+                </p>
+                <div class="feature_price">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Unlimited Shared Pipelines
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Task List
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Custom Views
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Advanced Reports
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Basic API Access
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      900+ Integrations
+                    </li>
+                  </ul>
+                  <button type="button" class="btn effect-letter scale rounded-pill btn_md_primary c-white bg-yollow">
+                    Start 14-Days Trial
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="item__price">
+                <div class="logo_price">
+                  <div class="icon_gif">
+                    <img class="gif" src="{% static 'assets/frontend/img/gif/smiling_face_with_sunglasses.gif' %}" />
+                  </div>
+                </div>
+                <h4 class="name_p">Enterprise</h4>
+                <div class="number">
+                  <span class="n_price">18.99</span>
+                  <span class="coins">$</span>
+                  <span class="d-block per">Per User/Month Billed Annually</span>
+                </div>
+                <p class="info_price">
+                  For businesses looking for deep customization and
+                  advanced reports
+                </p>
+                <div class="feature_price">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Custom Permissions
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Required Fields
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Full API Access
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      API/Formulas Support*
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Custom Reports*
+                    </li>
+                  </ul>
+                  <button type="button" class="btn scale effect-letter rounded-pill btn_md_primary c-white bg-orange-red">
+                    Contact With Us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blocks_pricing hide" id="yearly">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="item__price">
+                <div class="logo_price">
+                  <div class="icon_gif">
+                    <img class="gif" src="{% static 'assets/frontend/img/gif/partying_face.gif' %}" />
+                  </div>
+                </div>
+                <h4 class="name_p">Startup</h4>
+                <div class="number">
+                  <span class="n_price">140</span>
+                  <span class="coins">$</span>
+                  <span class="d-block per">Per-User/Yearly Billed Annually</span>
+                </div>
+                <p class="info_price">
+                  For individuals looking for a simple CRM solution
+                </p>
+                <div class="feature_price">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Basic CRM features
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Unlimited Personal Pipelines
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Email Power Tools
+                    </li>
+                  </ul>
+                  <button type="button" class="btn effect-letter scale rounded-pill btn_sm_primary c-white bg-blue">
+                    Get Started
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="item__price popular">
+                <img class="icon_popular" src="{% static 'assets/frontend/img/popular.svg' %}" />
+
+                <div class="logo_price">
+                  <div class="icon_gif">
+                    <img class="gif" src="{% static 'assets/frontend/img/gif/nerd_face.gif' %}" />
+                  </div>
+                </div>
+                <h4 class="name_p">Small Businesses</h4>
+                <div class="number">
+                  <span class="n_price">48</span>
+                  <span class="coins">$</span>
+                  <span class="d-block per">Per-User/Yearly Billed Annually</span>
+                </div>
+                <p class="info_price">
+                  For individuals looking for a simple CRM solution
+                </p>
+                <div class="feature_price">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Unlimited Shared Pipelines
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Task List
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Custom Views
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Advanced Reports
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Basic API Access
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      900+ Integrations
+                    </li>
+                  </ul>
+                  <button type="button" class="btn effect-letter scale rounded-pill btn_sm_primary c-white bg-yollow">
+                    Start 14-Days Trial
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="item__price">
+                <div class="logo_price">
+                  <div class="icon_gif">
+                    <img class="gif" src="{% static 'assets/frontend/img/gif/smiling_face_with_sunglasses.gif' %}" />
+                  </div>
+                </div>
+                <h4 class="name_p">Enterprise</h4>
+                <div class="number">
+                  <span class="n_price">144</span>
+                  <span class="coins">$</span>
+                  <span class="d-block per">Per-User/Yearly Billed Annually</span>
+                </div>
+                <p class="info_price">
+                  For businesses looking for deep customization and
+                  advanced reports
+                </p>
+                <div class="feature_price">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Custom Permissions
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Required Fields
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Full API Access
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      API/Formulas Support*
+                    </li>
+                    <li class="list-group-item">
+                      <i class="tio checkmark_circle_outlined"></i>
+                      Custom Reports*
+                    </li>
+                  </ul>
+                  <button type="button" class="btn scale effect-letter rounded-pill btn_sm_primary c-white bg-orange-red">
+                    Contact With Us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Start Pricing -->
+
+    <!-- Start FAQ -->
+    <section class="faq_section">
+      <div class="container">
+        <div class="padding-t-12" id="faq">
+          <div class="row justify-content-md-center">
+            <div class="col-md-8 col-lg-6 text-center">
+              <div class="title_sections">
+                <div class="before_title">
+                  <span>Frequently Asked</span>
+                  <span>Questions</span>
+                </div>
+                <h2>Want to ask something <br />from us?</h2>
+              </div>
+            </div>
+          </div>
+          <!-- block Collapse -->
+          <div class="block_faq">
+            <div class="accordion" id="accordionExample">
+              <div class="row justify-content-md-center">
+                <div class="col-lg-5">
+                  <div class="card">
+                    <div class="card-header active" id="headingOne">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          How do I make a yearly payment?
+                        </button>
+                      </h3>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>
+                          Serenity Is Multi-Faceted Blockchain Based
+                          Ecosystem, Energy Retailer For The People,
+                          Focusing On The Promotion Of Sustainable Living,
+                          Renewable Energy Production And Smart Energy
+                          Grid Utility Services.
+                        </p>
+                        <p>
+                          We Aim To Become The Incubator For New Renewable
+                          Energy-Related Projects By Using The Power Of
+                          Crowd.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          Can I have team members on different plans?
+                        </button>
+                      </h3>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>
+                          Serenity Is Multi-Faceted Blockchain Based
+                          Ecosystem, Energy Retailer For The People,
+                          Focusing On The Promotion Of Sustainable Living,
+                          Renewable Energy Production And Smart Energy
+                          Grid Utility Services.
+                        </p>
+                        <p>
+                          We Aim To Become The Incubator For New Renewable
+                          Energy-Related Projects By Using The Power Of
+                          Crowd.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                          How this technology works?
+                        </button>
+                      </h3>
+                    </div>
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>
+                          Serenity Is Multi-Faceted Blockchain Based
+                          Ecosystem, Energy Retailer For The People,
+                          Focusing On The Promotion Of Sustainable Living,
+                          Renewable Energy Production And Smart Energy
+                          Grid Utility Services.
+                        </p>
+                        <p>
+                          We Aim To Become The Incubator For New Renewable
+                          Energy-Related Projects By Using The Power Of
+                          Crowd.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingFour">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                          What is the comunity benefit?
+                        </button>
+                      </h3>
+                    </div>
+
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>
+                          Serenity Is Multi-Faceted Blockchain Based
+                          Ecosystem, Energy Retailer For The People,
+                          Focusing On The Promotion Of Sustainable Living,
+                          Renewable Energy Production And Smart Energy
+                          Grid Utility Services.
+                        </p>
+                        <p>
+                          We Aim To Become The Incubator For New Renewable
+                          Energy-Related Projects By Using The Power Of
+                          Crowd.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <div class="card">
+                    <div class="card-header" id="headingFive">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                          What payment types do you accept?
+                        </button>
+                      </h3>
+                    </div>
+
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>
+                          Serenity Is Multi-Faceted Blockchain Based
+                          Ecosystem, Energy Retailer For The People,
+                          Focusing On The Promotion Of Sustainable Living,
+                          Renewable Energy Production And Smart Energy
+                          Grid Utility Services.
+                        </p>
+                        <p>
+                          We Aim To Become The Incubator For New Renewable
+                          Energy-Related Projects By Using The Power Of
+                          Crowd.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingSix">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                          Website reponse taking time, how to improve?
+                        </button>
+                      </h3>
+                    </div>
+
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>
+                          Serenity Is Multi-Faceted Blockchain Based
+                          Ecosystem, Energy Retailer For The People,
+                          Focusing On The Promotion Of Sustainable Living,
+                          Renewable Energy Production And Smart Energy
+                          Grid Utility Services.
+                        </p>
+                        <p>
+                          We Aim To Become The Incubator For New Renewable
+                          Energy-Related Projects By Using The Power Of
+                          Crowd.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingSeven">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                          How to contact with Customer Service?
+                        </button>
+                      </h3>
+                    </div>
+
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <p>
+                          Serenity Is Multi-Faceted Blockchain Based
+                          Ecosystem, Energy Retailer For The People,
+                          Focusing On The Promotion Of Sustainable Living,
+                          Renewable Energy Production And Smart Energy
+                          Grid Utility Services.
+                        </p>
+                        <p>
+                          We Aim To Become The Incubator For New Renewable
+                          Energy-Related Projects By Using The Power Of
+                          Crowd.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End FAQ -->
+
+    <!-- Start Simple Contact -->
+    <section class="simplecontact_section padding-py-12">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-6 text-center">
+            <div class="title_sections mb-0">
+              <h2>Still need help?</h2>
+              <p>
+                Click on the blue round button at the bottom right corner
+                of this page. You can also email our support team at
+                <a class="c-blue" href="mailto:support@example.com">support@example.com</a>.
+              </p>
+              <button type="button" class="btn rounded-pill btn_md_primary c-white scale ripple bg-blue">
+                Contact With Us
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="circle-ripple"></div> -->
+        <div class="circle-ripple">
+          <div class="ripple ripple-1"></div>
+          <div class="ripple ripple-2"></div>
+          <div class="ripple ripple-3"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Simple Contact -->
+  </main>
+{% endblock content %}
+    
