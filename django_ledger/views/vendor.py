@@ -17,7 +17,7 @@ from django_ledger.views.mixins import LoginRequiredMixIn
 
 
 class VendorModelListView(LoginRequiredMixIn, ListView):
-    template_name = 'django_ledger/vendor_list.html'
+    template_name = 'dashboard/finance/vendor/list.html'
     context_object_name = 'vendors'
     PAGE_TITLE = _('Vendor List')
     extra_context = {

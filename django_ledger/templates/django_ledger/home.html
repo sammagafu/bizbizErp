@@ -1,26 +1,44 @@
-{% extends 'django_ledger/base.html' %}
+{% extends 'dashboard/base.html' %}
 {% load i18n %}
 {% load static %}
 {% load django_ledger %}
 
 
 {% block content %}
-    <section class="section">
-        <div class="container">
-            <div class="columns is-multiline">
-                {% for entity in entities %}
-                    <div class="column is-6-tablet">
-                        {% include 'django_ledger/includes/card_entity.html' with entity=entity %}
-                    </div>
-                {% endfor %}
-                <div class="column is-6-tablet has-text-centered">
-                    <div class="box">
-                        <a href="{% url 'django_ledger:entity-create' %}">
-                            <span class="icon is-large has-text-grey">{% icon "ic:baseline-add-circle-outline" 48 %}</span></a>
-                        <h2 class="is-size-3">{% trans 'New Entity' %}</h2>
-                    </div>
+<div id="content-page" class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            {% for entity in entities %}
+                    {% include 'django_ledger/includes/card_entity.html' with entity=entity %}
+            {% endfor %}
+        </div>
+
+        <div class="row">
+            <!-- <button type="button" class="btn mb-3 btn-primary"><i class="ri-bill-fill"></i>Primary</button> -->
+            <a href="{% url 'django_ledger:entity-create' %}" class="btn mb-3 btn-primary"><i class="ri-bill-fill"></i> {% trans 'Add another Business' %}</a>
+        </div>
+
+    </div>
+</div>
+    
+{% endblock content%}
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-multiline">
+            {% for entity in entities %}
+                <div class="column is-6-tablet">
+                    {% include 'django_ledger/includes/card_entity.html' with entity=entity %}
+                </div>
+            {% endfor %}
+            <div class="column is-6-tablet has-text-centered">
+                <div class="box">
+                    <a href="{% url 'django_ledger:entity-create' %}">
+                        <span class="icon is-large has-text-grey">{% icon "ic:baseline-add-circle-outline" 48 %}</span></a>
+                    <h2 class="is-size-3">{% trans 'New Entity' %}</h2>
                 </div>
             </div>
         </div>
-    </section>
-{% endblock %}
+    </div>
+</section>
+

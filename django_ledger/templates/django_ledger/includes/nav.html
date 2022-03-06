@@ -17,21 +17,6 @@
                 <span aria-hidden="true"></span>
             </a>
         </div>
-
-        <div id="djl-navbar-menu" class="navbar-menu">
-            {% navigation_menu 'mobile' %}
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <a href="{% url 'django_ledger:logout' %}"
-                       id="djl-el=logout-button-nav"
-                       class="button is-small is-danger is-outlined">
-                        {% trans 'Logout' %}
-                    </a>
-                </div>
-                <div class="navbar-item">{% feedback_button %}</div>
-                <div class="navbar-item">v{% current_version %}</div>
-            </div>
-        </div>
     </div>
 
 </nav>

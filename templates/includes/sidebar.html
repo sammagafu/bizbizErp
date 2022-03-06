@@ -1,66 +1,98 @@
+{% load navigation_menu from django_ledger %}
 <div id="sidebar-scrollbar">
-    <nav class="iq-sidebar-menu">
-       <ul id="iq-sidebar-toggle" class="iq-menu">
+   <nav class="iq-sidebar-menu">
+      <ul id="iq-sidebar-toggle" class="iq-menu">
          <li class="active">
-            <a href="{% url 'dashboard:index' %}" class="iq-waves-effect"><i class="las la-home iq-arrow-left"></i><span>Dashboard</span></a>
+            <a href="{% url 'django_ledger:home' %}" class="iq-waves-effect"><i
+                  class="las la-home iq-arrow-left"></i><span>Dashboard</span></a>
          </li>
-          <li aria-expanded="true">
-             <a href="#menu-design" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><i class="ri-menu-3-line iq-arrow-left"></i><span>Human Resource</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-             <ul id="menu-design" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                <li><a href="horizontal-menu.html"><i class="ri-git-commit-line"></i>Purchase Order</a></li>
-                <li><a href="horizontal-top-menu.html"><i class="ri-text-spacing"></i>Horizontal Top Menu</a></li>
-                <li><a href="two-sidebar.html"><i class="ri-indent-decrease"></i>Two Sidebar</a></li>
-                <li><a href="vertical-top-menu.html"><i class="ri-line-height"></i>Vertical block menu</a></li>
-             </ul>
-          </li>
+         <li>
+            <a href="#menu-level" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i
+                  class="ri-bank-line iq-arrow-left"></i><span>Financial</span><i
+                  class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+            <ul id="menu-level" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
+               <li>
+                  <ul>
+                     <li class="menu-level">
+                        <a href="#sub-menu" class="iq-waves-effect collapsed" data-toggle="collapse"
+                           aria-expanded="false"><i class="ri-file-settings-line"></i><span>Management</span><i
+                              class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="sub-menu" class="iq-submenu iq-submenu-data collapse">
+                           <li><a href="#">Vendors</a></li>
+                           <li><a href="#">Customers</a></li>
+                           <li><a href="#">Bank Accounts</a></li>
+                           <li><a href="#">Bills</a></li>
+                           <li><a href="#">Invoices</a></li>
+                           <li><a href="#">Purchase Orders</a></li>
+                           <li><a href="#">Invetory</a></li>
+                        </ul>
+                     </li>
 
-          <li>
-             <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>CRM</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-             <ul id="userinfo" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
-                <li><a href="profile.html"><i class="las la-id-card-alt"></i>User Profile</a></li>
-                <li><a href="profile-edit.html"><i class="las la-edit"></i>User Edit</a></li>
-                <li><a href="add-user.html"><i class="las la-plus-circle"></i>User Add</a></li>
-                <li><a href="user-list.html"><i class="las la-th-list"></i>User List</a></li>
-             </ul>
-          </li>
 
-          <li>
-             <a href="#mailbox" class="iq-waves-effect collapsed"  data-toggle="collapse" aria-expanded="false"><i class="las la-mail-bulk iq-arrow-left"></i><span>Financial</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-             <ul id="mailbox" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                <li><a href="app/index.html"><i class="las la-inbox"></i>Inbox</a></li>
-                <li><a href="app/email-compose.html"><i class="ri-mail-send-line"></i>Email Compose</a></li>
-             </ul>
-          </li>
-          <li>
-             <a href="#ui-elements" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-elementor iq-arrow-left"></i><span>Sales</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-             <ul id="ui-elements" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                <li><a href="ui-colors.html"><i class="las la-palette"></i>colors</a></li>
-                <li><a href="ui-typography.html"><i class="las la-keyboard"></i>Typography</a></li>
-                <li><a href="ui-alerts.html"><i class="las la-tag"></i>Alerts</a></li>
-                <li><a href="ui-badges.html"><i class="lab la-atlassian"></i>Badges</a></li>
-                <li><a href="ui-breadcrumb.html"><i class="las la-bars"></i>Breadcrumb</a></li>
-                <li><a href="ui-buttons.html"><i class="las la-tablet"></i>Buttons</a></li>
-             </ul>
-          </li>
-          <li>
-             <a href="#forms" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="lab la-wpforms iq-arrow-left"></i><span>Purchases</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-             <ul id="forms" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                <li><a href="form-layout.html"><i class="las la-book"></i>Form Elements</a></li>
-                <li><a href="form-validation.html"><i class="las la-edit"></i>Form Validation</a></li>
-                <li><a href="form-switch.html"><i class="las la-toggle-off"></i>Form Switch</a></li>
-                <li><a href="form-chechbox.html"><i class="las la-check-square"></i>Form Checkbox</a></li>
-                <li><a href="form-radio.html"><i class="ri-radio-button-line"></i>Form Radio</a></li>
-             </ul>
-          </li>
-          <li>
-             <a href="#wizard-form" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-archive-drawer-line iq-arrow-left"></i><span>Invetory</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-             <ul id="wizard-form" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                <li><a href="form-wizard.html"><i class="ri-clockwise-line"></i>Simple Wizard</a></li>
-                <li><a href="form-wizard-validate.html"><i class="ri-clockwise-2-line"></i>Validate Wizard</a></li>
-                <li><a href="form-wizard-vertical.html"><i class="ri-anticlockwise-line"></i>Vertical Wizard</a></li>
-             </ul>
-          </li>
-          <!-- <li>
+                     <li class="menu-level">
+                        <a href="#sub-menu2" class="iq-waves-effect collapsed" data-toggle="collapse"
+                           aria-expanded="false"><i class="ri-file-list-3-line"></i><span>Your List</span><i
+                              class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="sub-menu2" class="iq-submenu iq-submenu-data collapse">
+                           <li><a href="#">Entity Units</a></li>
+                           <li><a href="#">Products & Services</a></li>
+                           <li><a href="#"></i> Payments</a></li>
+                           <li><a href="#">Invetory Items</a></li>
+                           <li><a href="#">Unit of Measuers</a></li>
+                        </ul>
+                     </li>
+
+                     <li class="menu-level">
+                        <a href="#sub-menu3" class="iq-waves-effect collapsed" data-toggle="collapse"
+                           aria-expanded="false"><i class="ri-bar-chart-fill"></i><span>Reports</span><i
+                              class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="sub-menu3" class="iq-submenu iq-submenu-data collapse">
+                           <li><a href="#">Balance Sheets</a></li>
+                           <li><a href="#">Income Statements</a></li>
+                        </ul>
+                     </li>
+
+                     <li class="menu-level">
+                        <a href="#sub-menu4" class="iq-waves-effect collapsed" data-toggle="collapse"
+                           aria-expanded="false"><i class="ri-play-circle-line"></i><span>Accounting</span><i
+                              class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="sub-menu4" class="iq-submenu iq-submenu-data collapse">
+                           <li><a href="#">Chats of Accounts</a></li>
+                           <li><a href="#">Ledgers</a></li>
+                           <li><a href="#">Data Import</a></li>
+                        </ul>
+                     </li>
+
+                  </ul>
+               </li>
+            </ul>
+         </li>
+
+
+         <li>
+            <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span
+                  class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>CRM</span><i
+                  class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+            <ul id="userinfo" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
+               <li><a href="profile.html"><i class="las la-id-card-alt"></i>User Profile</a></li>
+               <li><a href="profile-edit.html"><i class="las la-edit"></i>User Edit</a></li>
+               <li><a href="add-user.html"><i class="las la-plus-circle"></i>User Add</a></li>
+               <li><a href="user-list.html"><i class="las la-th-list"></i>User List</a></li>
+            </ul>
+         </li>
+
+
+         <li>
+            <a href="#wizard-form" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i
+                  class="ri-archive-drawer-line iq-arrow-left"></i><span>Human Resource</span><i
+                  class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+            <ul id="wizard-form" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+               <li><a href="form-wizard.html"><i class="ri-clockwise-line"></i>Simple Wizard</a></li>
+               <li><a href="form-wizard-validate.html"><i class="ri-clockwise-2-line"></i>Validate Wizard</a></li>
+               <li><a href="form-wizard-vertical.html"><i class="ri-anticlockwise-line"></i>Vertical Wizard</a></li>
+            </ul>
+         </li>
+         <!-- <li>
              <a href="#tables" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-table-line iq-arrow-left"></i><span>Table</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
              <ul id="tables" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                 <li><a href="tables-basic.html"><i class="ri-table-line"></i>Basic Tables</a></li>
@@ -112,28 +144,8 @@
                 <li><a href="pages-faq.html"><i class="ri-compasses-line"></i>Faq</a></li>
              </ul>
           </li> -->
-          <li>
-             <a href="#menu-level" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-record-circle-line iq-arrow-left"></i><span>Settings</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-             <ul id="menu-level" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                <li><a href="#"><i class="ri-record-circle-line"></i>Menu 1</a></li>
-                <li>
-                   <a href="#"><i class="ri-record-circle-line"></i>Menu 2</a>
-                   <ul>
-                      <li class="menu-level">
-                         <a href="#sub-menu" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="ri-play-circle-line"></i><span>Sub-menu</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
-                         <ul id="sub-menu" class="iq-submenu iq-submenu-data collapse">
-                            <li><a href="#"><i class="ri-record-circle-line"></i>Sub-menu 1</a></li>
-                            <li><a href="#"><i class="ri-record-circle-line"></i>Sub-menu 2</a></li>
-                            <li><a href="#"><i class="ri-record-circle-line"></i>Sub-menu 3</a></li>
-                         </ul>
-                      </li>
-                   </ul>
-                </li>
-                <li><a href="#"><i class="ri-record-circle-line"></i>Menu 3</a></li>
-                <li><a href="#"><i class="ri-record-circle-line"></i>Menu 4</a></li>
-             </ul>
-          </li>
-       </ul>
-    </nav>
-    <div class="p-3"></div>
- </div>
+
+      </ul>
+   </nav>
+   <div class="p-3"></div>
+</div>

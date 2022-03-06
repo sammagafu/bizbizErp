@@ -1,5 +1,134 @@
 {% load django_ledger %}
 
+<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+    <div class="iq-card-header d-flex justify-content-between">
+        <div class="iq-header-title">
+           <h4 class="card-title">Financial Analysis</h4>
+        </div>
+     </div>
+
+    <div class="iq-card-body">
+       <div class="d-flex align-items-center mt-3">
+          <div class="icon iq-icon-box rounded iq-bg-danger mr-3">
+             <i class="ri-shopping-bag-line"></i>
+          </div>
+          <div class="iq-details col-sm-9 p-0">
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="title text-dark">Solvency</span>
+                <div class="percentage"><b><span></span> {{ tx_digest.ratios.current_ratio | currency_format }} <span>$</span></b></div>
+             </div>
+             <div class="iq-progress-bar-linear d-inline-block w-100">
+                <div class="iq-progress-bar">
+                   <span class="bg-danger" data-percent="{{ tx_digest.ratios.current_ratio }}" style="transition: width 2s ease 0s; width: {{ tx_digest.ratios.current_ratio|percentage }};"></span>
+                </div>
+             </div>
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="">Current Ratio</span>
+                {% comment %} <div class="percentage">{{ tx_digest.ratios.current_ratio }}<span>%</span></div> {% endcomment %}
+             </div>
+          </div>
+       </div>
+
+       <hr class="mt-4 mb-4">
+       <div class="d-flex align-items-center">
+          <div class="icon iq-icon-box rounded iq-bg-warning mr-3">
+             <i class="ri-home-8-line"></i>
+          </div>
+          <div class="iq-details col-sm-9 p-0">
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="title text-dark">Leverage</span>
+                <div class="percentage"><b> {{ tx_digest.ratios.debt_to_equity | currency_format }}</b></div>
+             </div>
+             <div class="iq-progress-bar-linear d-inline-block w-100">
+                <div class="iq-progress-bar">
+                   <span class="bg-warning" data-percent="{{ tx_digest.ratios.debt_to_equity | currency_format }}" style="transition: width 2s ease 0s; width: {{ tx_digest.ratios.debt_to_equity | percentage }};"></span>
+                </div>
+             </div>
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="">Debt to
+                    Equity</span>
+                {% comment %} <div class="percentage">32<span>%</span></div> {% endcomment %}
+             </div>
+          </div>
+       </div>
+
+
+
+       <hr class="mt-4 mb-4">
+       <div class="d-flex align-items-center">
+          <div class="icon iq-icon-box rounded iq-bg-warning mr-3">
+             <i class="ri-home-8-line"></i>
+          </div>
+          <div class="iq-details col-sm-9 p-0">
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="title text-dark">Profitability</span>
+                <div class="percentage"><b> {{ tx_digest.ratios.return_on_equity | percentage }}</b></div>
+             </div>
+             <div class="iq-progress-bar-linear d-inline-block w-100">
+                <div class="iq-progress-bar">
+                   <span class="bg-warning" data-percent="{{ tx_digest.ratios.return_on_equity | currency_format }}" style="transition: width 2s ease 0s; width:{{ tx_digest.ratios.return_on_equity | percentage  }};"></span>
+                </div>
+             </div>
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="">Debt to
+                    Equity</span>
+                {% comment %} <div class="percentage">32<span>%</span></div> {% endcomment %}
+             </div>
+          </div>
+       </div>
+
+
+       <hr class="mt-4 mb-4">
+       <div class="d-flex align-items-center">
+          <div class="icon iq-icon-box rounded iq-bg-info mr-3">
+             <i class="ri-bank-line"></i>
+          </div>
+          <div class="iq-details col-sm-9 p-0">
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="title text-dark">Profitability</span>
+                <div class="percentage float-right"><b><span>$</span> {{ tx_digest.ratios.net_profit_margin | percentage }} </b></div>
+             </div>
+             <div class="iq-progress-bar-linear d-inline-block w-100">
+                <div class="iq-progress-bar">
+                   <span class="bg-info" data-percent="{{ tx_digest.ratios.net_profit_margin | percentage }}" style="transition: width 2s ease 0s; width: {{ tx_digest.ratios.net_profit_margin | percentage }};"></span>
+                </div>
+             </div>
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="">Net Profit
+                    Margin</span>
+                {% comment %} <div class="percentage">60<span>%</span></div> {% endcomment %}
+             </div>
+          </div>
+       </div>
+
+       <hr class="mt-4 mb-4">
+       <div class="d-flex align-items-center">
+          <div class="icon iq-icon-box rounded iq-bg-info mr-3">
+             <i class="ri-bank-line"></i>
+          </div>
+          <div class="iq-details col-sm-9 p-0">
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="title text-dark">Profitability</span>
+                <div class="percentage float-right"><b> {{ tx_digest.ratios.gross_profit_margin |percentage }} </b></div>
+             </div>
+             <div class="iq-progress-bar-linear d-inline-block w-100">
+                <div class="iq-progress-bar">
+                   <span class="bg-info" data-percent="{{ tx_digest.ratios.gross_profit_margin|percentage }}" style="transition: width 2s ease 0s; width: {{ tx_digest.ratios.gross_profit_margin | percentage}};"></span>
+                </div>
+             </div>
+             <div class="d-flex align-items-center justify-content-between">
+                <span class="">Gross Profit
+                    Margin</span>
+                
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+{% comment %} 
+
+
+
 <div class="box content">
     <h2 class="has-text-weight-light has-text-centered">Financial Analysis</h2>
 
@@ -13,9 +142,10 @@
         {{ tx_digest.ratios.current_ratio }}</progress>
     <h5 class="has-text-weight-light">Quick
         Ratio: {{ tx_digest.ratios.quick_ratio | currency_format }} </h5>
+
     <progress
             class="progress {{ tx_digest.ratios.quick_ratio | fin_ratio_threshold_class:'quick_ratio' }}"
-            value="{{ tx_digest.ratios.quick_ratio }}"
+            value=" "
             max="{% fin_ratio_max_value ratio='quick_ratio' %}">
         {{ tx_digest.ratios.current_ratio }}</progress>
 
@@ -59,4 +189,4 @@
             value="{{ tx_digest.ratios.gross_profit_margin }}"
             max="{% fin_ratio_max_value ratio='gross_profit_margin' %}">{{ tx_digest.ratios.gross_profit_margin }}</progress>
 
-</div>
+</div> {% endcomment %}

@@ -1,21 +1,67 @@
 {% load django_ledger %}
 {% load i18n %}
 
-<div class="box content djetler-box-yellow">
-    <h2 class="has-text-centered has-text-weight-light">{% trans 'Revenue' %}</h2>
-    <h1 class="has-text-centered">
-        {% currency_symbol %}{{ tx_digest.group_balance.GROUP_INCOME | currency_format }}</h1>
-    <h2 class="has-text-centered has-text-weight-light">{% trans 'Expenses' %}</h2>
-    <h1 class="has-text-centered">
-        {% currency_symbol %}{{ tx_digest.group_balance.GROUP_EXPENSES | reverse_sing | currency_format }}</h1>
-    <h2 class="has-text-centered has-text-weight-light">{% trans 'Earnings (Loss)' %}</h2>
-    <h1 class="has-text-centered">
-        {% currency_symbol %}{{ tx_digest.group_balance.GROUP_EARNINGS | currency_format }}</h1>
-    <h4 class="has-text-centered has-text-weight-light">{% trans 'Accounting Period' %}</h4>
-    {% if not has_date %}
-        <h3 class="has-text-centered">{{ from_date | date }} <span
-                class="is-italic">{% trans 'thru' %}</span> {{ to_date | date }}</h3>
-    {% else %}
-        <h3 class="has-text-centered">{{ from_date | date }}</h3>
-    {% endif %}
-</div>
+
+ <div class="col-md-6 col-lg-3">
+    <div class="iq-card iq-card-block iq-card-stretch iq-card-height bg-warning rounded">
+       <div class="iq-card-body">
+          <div class="d-flex align-items-center justify-content-between">
+             <div class="icon iq-icon-box rounded iq-bg-warning rounded shadow" data-wow-delay="0.2s">
+                <i class="lab la-product-hunt"></i>
+             </div>
+             <div class="iq-text">
+                <h6 class="text-white">{% trans 'Expenses' %}</h6>
+                <h3 class="text-white">{% currency_symbol %}{{ tx_digest.group_balance.GROUP_EXPENSES | reverse_sing | currency_format }}</h3>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+ <div class="col-md-6 col-lg-3">
+    <div class="iq-card iq-card-block iq-card-stretch iq-card-height bg-primary rounded">
+       <div class="iq-card-body">
+          <div class="d-flex align-items-center justify-content-between">
+             <div class="icon iq-icon-box rounded iq-bg-primary rounded shadow" data-wow-delay="0.2s">
+                <i class="las la-users"></i>
+             </div>
+             <div class="iq-text">
+                <h6 class="text-white">{% trans 'Revenue' %}</h6>
+                <h3 class="text-white"> {% currency_symbol %}{{ tx_digest.group_balance.GROUP_INCOME | currency_format }}</h3>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+ <div class="col-md-6 col-lg-3">
+    <div class="iq-card iq-card-block iq-card-stretch iq-card-height bg-warning rounded">
+       <div class="iq-card-body">
+          <div class="d-flex align-items-center justify-content-between">
+             <div class="icon iq-icon-box rounded iq-bg-warning rounded shadow" data-wow-delay="0.2s">
+                <i class="lab la-product-hunt"></i>
+             </div>
+             <div class="iq-text">
+                <h6 class="text-white">{% trans 'Earnings (Loss)' %}</h6>
+                <h3 class="text-white">{% currency_symbol %}{{ tx_digest.group_balance.GROUP_EXPENSES | reverse_sing | currency_format }}</h3>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+ <div class="col-md-6 col-lg-3">
+    <div class="iq-card iq-card-block iq-card-stretch iq-card-height bg-primary rounded">
+       <div class="iq-card-body">
+          <div class="d-flex align-items-center justify-content-between">
+             <div class="icon iq-icon-box rounded iq-bg-primary rounded shadow" data-wow-delay="0.2s">
+                <i class="las la-users"></i>
+             </div>
+             <div class="iq-text">
+                <h6 class="text-white">{% trans 'Accounting Period' %}</h6>
+                <p class="text-white">From: {{ from_date | date }} To: {{ to_date | date }}</p>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

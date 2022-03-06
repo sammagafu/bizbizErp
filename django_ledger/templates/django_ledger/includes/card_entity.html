@@ -1,18 +1,31 @@
 {% load django_ledger %}
 {% now "Y" as current_year %}
 
-
-<div class="card">
-    <div class="card-content">
-        <p class="title has-text-weight-light">
-            <span class="icon is-medium">{% icon "ic:baseline-business" 36 %}</span>{{ entity.name }}
-        </p>
-        <p class="subtitle">{{ entity.address_1 }}</p>
-        <p>Created: {{ entity.created | timesince }} ago</p>
+<div class="col-lg-3 col-md-6">
+    <div class="iq-card dash-hover-gradient iq-card-block iq-card-stretch iq-card-height">
+       <div class="iq-card-header d-flex justify-content-between border-0">
+          <div class="mb-0 font-size-32 text-dark"><i class="ri-bank-line font-weight-light"></i></div>
+          <div class="iq-card-header-toolbar d-flex align-items-center">
+             <div class="dropdown">
+                <span class="dropdown-toggle" id="d-28" data-toggle="dropdown">
+                <i class="ri-more-2-fill "></i>
+                </span>
+                <div class="dropdown-menu dropdown-menu-right shadow-none">
+                   <a class="dropdown-item" href="{{ entity.get_dashboard_url }}"><i class="ri-pencil-fill mr-2"></i>Dashboard</a>
+                   <a class="dropdown-item" href="{{ entity.get_manage_url }}"><i class="ri-printer-fill mr-2"></i>Manage</a>
+                   <a class="dropdown-item" href="{{ entity.get_delete_url }}"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="iq-card-body">
+          <h3><a href="{{ entity.get_dashboard_url }}">{{ entity.name }}</a></h3>
+          <p class="mb-0">{{ entity.address_1 }}</p>
+       </div>
+       <div class="card-action font-size-14 p-3">
+        Created : {{ entity.created | timesince }} ago
+       </div>
     </div>
-    <footer class="card-footer">
-        <a href="{{ entity.get_dashboard_url }}" class="card-footer-item">Dashboard</a>
-        <a href="{{ entity.get_manage_url }}" class="card-footer-item has-text-info">Manage</a>
-        <a href="{{ entity.get_delete_url }}" class="card-footer-item has-text-danger">Delete</a>
-    </footer>
-</div>
+ </div>
+
+

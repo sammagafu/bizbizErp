@@ -35,7 +35,7 @@ from django_ledger.views.mixins import (
 
 # Entity CRUD Views ----
 class EntityModelListView(LoginRequiredMixIn, ListView):
-    template_name = 'django_ledger/entitiy_list.html'
+    template_name = 'dashboard/finance/entity/index.html'
     context_object_name = 'entities'
     PAGE_TITLE = _('My Entities')
     extra_context = {
@@ -49,7 +49,7 @@ class EntityModelListView(LoginRequiredMixIn, ListView):
 
 
 class EntityModelCreateView(LoginRequiredMixIn, CreateView):
-    template_name = 'django_ledger/entity_create.html'
+    template_name = 'dashboard/finance/entity/create.html'
     form_class = EntityModelCreateForm
     PAGE_TITLE = _('Create Entity')
     extra_context = {
@@ -85,7 +85,7 @@ class EntityModelCreateView(LoginRequiredMixIn, CreateView):
 
 class EntityModelUpdateView(LoginRequiredMixIn, UpdateView):
     context_object_name = 'entity'
-    template_name = 'django_ledger/entity_update.html'
+    template_name = 'dashboard/finance/entity/update.html'
     form_class = EntityModelUpdateForm
     slug_url_kwarg = 'entity_slug'
 
@@ -105,7 +105,7 @@ class EntityModelUpdateView(LoginRequiredMixIn, UpdateView):
 class EntityDeleteView(LoginRequiredMixIn, DeleteView):
     slug_url_kwarg = 'entity_slug'
     context_object_name = 'entity'
-    template_name = 'django_ledger/entity_delete.html'
+    template_name = 'dashboard/finance/entity/delete.html'
     verify_descendants = False
 
     def get_context_data(self, *, object_list=None, **kwargs):
