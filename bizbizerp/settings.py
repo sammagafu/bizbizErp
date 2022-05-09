@@ -14,7 +14,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages',
+    'crm',
+    'hrms',
     'django_ledger',
+    
     # all auth
     'crispy_forms',
     'allauth',

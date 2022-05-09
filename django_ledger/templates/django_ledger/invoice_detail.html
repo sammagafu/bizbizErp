@@ -31,8 +31,7 @@
                         <div class="level-item has-text-centered">
                             <div>
                                 <p class="heading">Cash Account:
-                                    <a href="{% url 'django_ledger:account-detail' account_pk=invoice.cash_account.uuid entity_slug=view.kwargs.entity_slug %}"
-                                       class="has-text-danger">{{ invoice.cash_account.code }}</a>
+                                    
                                 <p class="title">
                                     {% currency_symbol %}{{ invoice.get_amount_cash | absolute | currency_format }}</p>
                             </div>

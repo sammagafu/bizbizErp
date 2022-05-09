@@ -1,0 +1,46 @@
+Administrator:
+- adds new projects
+- updates data in the projects table
+- new employees
+- establishes access for employees
+- adds possible places of change of residence at work
+- adds and updates data in the resource table
+- adds records and creates a shift mode at work and the hours of these shifts
+- approves holidays
+- approves resource reservations
+- change the decision to allocate leave, but the info is to be sent to the employee
+- adds hourly rates
+- can modify the arrival and departure times if something is wrong
+(may apply a correction if the employee does not bounce and then adds a seat change)
+- can remove employees from tables if they leave the company
+- can change users' passwords if they forget
+- can add new keys to the RFID card
+
+* has access to reports of hours worked
+* creates and has access to all statistics about employees, i.e. holidays, hours worked,
+  state
+
+The administrator cannot:
+- change and manipulate the employee's working hours without leaving a trace on the server
+(i.e. he cannot delete the employee that he was not at work if he was, etc., he can, as mentioned above, make a correction, but the new and old changes are to be marked
+to be previewed for the boss and employee in the form of a crossed record along with the signum / nickname of the person who made the modification)
+-
+
+
+User can:
+- bounce and add coming / going
+- add reservations but wait for the boss's approval
+- add requests for leave
+- add data to your table - photo, address details, etc.
+- change your password: BUT YOU MUST KNOW THE PREVIOUS IF HE DOESN'T CHANGE THE HEAD
+- add descriptions to each hour worked with an indication of the project it concerns
+- manually add the time of arrival and departure, which should be marked in the system as a manual intervention
+
+User cannot:
+- modify tables and records that do not result from his qualifications = Admin - User (see above)
+
+
+In general, users should be given as little permission for everything as possible. They only have to use the data prepared by the admin, not
+do nothing yourself.
+
+Use the system I gave you the Czech one

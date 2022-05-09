@@ -15,6 +15,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages',
     'django_ledger',
+    'crm',
+    'hrms',
     # all auth
     'crispy_forms',
     'allauth',
